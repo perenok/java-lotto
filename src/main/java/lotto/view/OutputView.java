@@ -14,6 +14,8 @@ public class OutputView {
     public static final String RANK_FORM = "%d개 일치 (%d원) - %d개" + System.lineSeparator();
     public static final String RANK_BONUS_FORM = "%d개 일치, 보너스 볼 일치(%d원) - %d개" + System.lineSeparator();
 
+    private OutputView(){
+    }
 
     public static void printMessage(final Object message) {
         System.out.println(message);

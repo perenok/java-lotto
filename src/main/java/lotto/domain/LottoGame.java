@@ -16,13 +16,17 @@ public class LottoGame {
         return myLottos;
     }
 
-    public void buyLottos(Money money, LottoGenerator lottoGenerator) {
+    public void clear() {
+        myLottos.clear();
+    }
+
+    public void buyLottos(Money money, LottoGenerator lottoGenerator) throws IllegalArgumentException {
         IntStream.range(0, money.countLotto())
                 .mapToObj(i -> lottoGenerator.generate())
                 .forEach(myLottos::add);
     }
 
     public LottoGameResult calculateLottoGameResult(WinningLotto winningLotto) {
-        return myLottos().compareWithWinningLotto(winningLotto);
+        return myLottos.compareWithWinningLotto(winningLotto);
     }
 }

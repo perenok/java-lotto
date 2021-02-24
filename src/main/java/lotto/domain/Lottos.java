@@ -9,15 +9,12 @@ public class Lottos {
 
     private final List<Lotto> lottos = new ArrayList<>();
 
-    public Lottos() {
-    }
-
-    public Lottos(List<Lotto> lottos) {
-        this.lottos.addAll(lottos);
-    }
-
     public void add(Lotto lotto) {
-        this.lottos.add(lotto);
+        lottos.add(lotto);
+    }
+
+    public void clear(){
+        lottos.clear();
     }
 
     public List<Lotto> lottos() {
